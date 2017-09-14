@@ -4,5 +4,9 @@
 
 <h4>Locations:</h4>
 <% @machines.each do |machine| %>
-	<ul><%= machine.location %></ul>
+	<ul>
+		<p><%= machine.location %></p>
+		<p>Average Price: $<%= Snack.average_price(machine.id) %></p>
+		<p>Snack Count: <%= machine.snacks.count %></p>
+	</ul>
 <% end %>
