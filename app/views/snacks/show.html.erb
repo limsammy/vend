@@ -1,0 +1,8 @@
+<h3><%= @snack.name %> Show Page</h3>
+<p><b>Price:</b> $<%= @snack.price %></p>
+<br>
+
+<h4>Locations:</h4>
+<% @machine.each do |machine| %>
+	<ul><%= machine.location %></ul>
+<% end %>

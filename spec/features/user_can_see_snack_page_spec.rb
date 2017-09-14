@@ -8,11 +8,9 @@ feature "When a user visits a snack page" do
     s_1 = m_1.snacks.create(name: 'Cheetos', price: 2.50)
     s_2 = m_1.snacks.create(name: 'Doritos', price: 2.25)
 
-    visit machine_snack_path(s_1)
+    visit machine_snack_path(m_1.id, s_1.id)
 
     expect(current_page).to eq('/machines/1/snacks')
-    # As a user
-    # When I visit a specific snack page
     # I see the name of that snack
     # I see the price for that snack
     # I see a list of locations with vending machines that carry that snack
