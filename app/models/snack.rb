@@ -1,3 +1,3 @@
 class Snack < ApplicationRecord
-  belongs_to :machines
+  belongs_to :machine
 end

@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   end
 
   resources :machines, only: [:show] do
-    resources :snacks, only: [:show]
+    resources :snacks, only: [:index]
   end
 end
