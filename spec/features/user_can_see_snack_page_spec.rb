@@ -10,7 +10,7 @@ feature "When a user visits a snack page" do
 
     visit machine_snack_path(m_1.id, s_1.id)
 
-    expect(current_page).to eq('/machines/1/snacks')
+    expect(current_path).to eq("/machines/#{m_1.id}/snacks/#{s_1.id}")
     # I see the name of that snack
     # I see the price for that snack
     # I see a list of locations with vending machines that carry that snack

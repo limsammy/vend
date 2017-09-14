@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 20170914160136) do
     t.index ["owner_id"], name: "index_machines_on_owner_id"
   end
 
+  create_table "machines_snacks", id: false, force: :cascade do |t|
+    t.bigint "machine_id", null: false
+    t.bigint "snack_id", null: false
+    t.index ["machine_id"], name: "index_machines_snacks_on_machine_id"
+    t.index ["snack_id"], name: "index_machines_snacks_on_snack_id"
+  end
+
   create_table "owners", force: :cascade do |t|
     t.string "name"
   end
